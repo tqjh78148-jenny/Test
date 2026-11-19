@@ -1558,8 +1558,8 @@
               </p>
             </div>
             <div style="display:flex; gap:0.5rem;">
-              <button class="btn btn-accent btn-sm" onclick="exportScoresCSV()">📥 下載成績 (CSV/Excel)</button>
-              <button class="btn btn-outline btn-sm" onclick="teacherLogout()">登出教師帳號</button>
+              <button type="button" class="btn btn-accent btn-sm" onclick="exportScoresCSV()">📥 下載成績 (CSV/Excel)</button>
+              <button type="button" class="btn btn-outline btn-sm" onclick="teacherLogout()">登出教師帳號</button>
             </div>
           </div>
         </div>
@@ -1576,7 +1576,7 @@
               </div>
             </div>
             <div style="display:flex; gap:0.5rem;">
-              <button class="btn btn-sm" style="background:#ea580c; color:white; font-weight:700; border:none; padding:0.5rem 1rem;" onclick="configureGasSyncUrl()">
+              <button type="button" class="btn btn-sm" style="background:#ea580c; color:white; font-weight:700; border:none; padding:0.5rem 1rem;" onclick="configureGasSyncUrl()">
                 ☁️ 立即貼上 Google 雲端網址
               </button>
             </div>
@@ -1585,10 +1585,10 @@
 
         <!-- Dashboard Sub-Tabs -->
         <div class="tabs-nav">
-          <button class="tab-btn active" onclick="switchTeacherTab('overview')">📊 班級成績總覽</button>
-          <button class="tab-btn" onclick="switchTeacherTab('assignments')">🎯 命題與單元組合</button>
-          <button class="tab-btn" onclick="switchTeacherTab('bank')">📚 題庫與單元維護</button>
-          <button id="adminTabBtn" class="tab-btn hidden" onclick="switchTeacherTab('admin')">⚙️ 系統管理工具</button>
+          <button type="button" class="tab-btn active" onclick="switchTeacherTab('overview')">📊 班級成績總覽</button>
+          <button type="button" class="tab-btn" onclick="switchTeacherTab('assignments')">🎯 命題與單元組合</button>
+          <button type="button" class="tab-btn" onclick="switchTeacherTab('bank')">📚 題庫與單元維護</button>
+          <button type="button" id="adminTabBtn" class="tab-btn hidden" onclick="switchTeacherTab('admin')">⚙️ 系統管理工具</button>
         </div>
 
         <!-- Teacher Tab 1: Overview -->
@@ -1637,8 +1637,8 @@
                   🟢 系統已即時連線（交卷立即連線更新）
                 </span>
                 <span id="teacherLastSyncTime" style="font-size:0.82rem; color:#64748b; font-weight:600;">剛剛同步</span>
-                <button class="btn btn-outline btn-sm" onclick="loadTeacherOverview(true)">🔄 立即重新整理</button>
-                <button class="btn btn-outline btn-sm" style="border-color:#2563eb; color:#1d4ed8; font-weight:700; background:#eff6ff;" onclick="configureGasSyncUrl()">☁️ 設定跨載具雲端同步</button>
+                <button type="button" class="btn btn-outline btn-sm" onclick="loadTeacherOverview(true)">🔄 立即重新整理</button>
+                <button type="button" class="btn btn-outline btn-sm" style="border-color:#2563eb; color:#1d4ed8; font-weight:700; background:#eff6ff;" onclick="configureGasSyncUrl()">☁️ 設定跨載具雲端同步</button>
               </div>
             </div>
           </div>
@@ -1676,7 +1676,7 @@
               </div>
               <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
                 <input type="text" id="matrixSearchInput" class="form-input" placeholder="🔍 搜尋座號或姓名..." style="width:180px; padding:0.4rem 0.75rem; font-size:0.9rem;" oninput="filterMatrixTable()">
-                <button class="btn btn-accent btn-sm" onclick="exportScoresCSV()">📥 匯出成績大表 CSV</button>
+                <button type="button" class="btn btn-accent btn-sm" onclick="exportScoresCSV()">📥 匯出成績大表 CSV</button>
               </div>
             </div>
 
@@ -1745,7 +1745,7 @@
                 </div>
                 <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
                   <input type="text" id="studentSearchInput" class="form-input" placeholder="🔍 搜尋座號或姓名..." style="width:180px; padding:0.4rem 0.75rem; font-size:0.9rem;" oninput="filterStudentTable()">
-                  <button class="btn btn-accent btn-sm" onclick="exportScoresCSV()">📥 匯出 CSV</button>
+                  <button type="button" class="btn btn-accent btn-sm" onclick="exportScoresCSV()">📥 匯出 CSV</button>
                 </div>
               </div>
 
@@ -1877,7 +1877,7 @@
                   <option value="geography">地理科</option>
                   <option value="civics">公民科</option>
                 </select>
-                <button class="btn btn-primary btn-sm" onclick="openNewUnitModal()">➕ 新增測驗單元</button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="openNewUnitModal()">➕ 新增測驗單元</button>
               </div>
             </div>
 
@@ -1906,7 +1906,7 @@
               <div>
                 <h3 class="card-title" id="unitQuestionsTitle">單元題庫題目清單</h3>
               </div>
-              <button class="btn btn-accent btn-sm" onclick="openNewQuestionModal()">➕ 在此單元新增題目</button>
+              <button type="button" class="btn btn-accent btn-sm" onclick="openNewQuestionModal()">➕ 在此單元新增題目</button>
             </div>
             <div id="questionsContainer" style="display:flex; flex-direction:column; gap:1rem;"></div>
           </div>
@@ -1929,7 +1929,7 @@
               </p>
               <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
                 <input type="password" id="adminResetPassword" class="form-input" placeholder="請輸入管理員密碼" style="width:260px;">
-                <button class="btn btn-danger" onclick="executeAdminReset()">執行清除成績數據</button>
+                <button type="button" class="btn btn-danger" onclick="executeAdminReset()">執行清除成績數據</button>
               </div>
               <div id="adminResetMsg" class="hidden badge" style="margin-top:0.75rem; padding:0.5rem 1rem;"></div>
             </div>
@@ -3162,6 +3162,14 @@
       checkServerHealth();
       syncLocalRecordsToServer();
       updateTeacherSyncBadge();
+
+      // 自動恢復教師未完成之後台檢視（避免閃退或重整後跳回首頁）
+      try {
+        const lastView = sessionStorage.getItem('tq_last_view');
+        if (lastView === 'teacher' && currentTeacher) {
+          navigateTo('teacher');
+        }
+      } catch(e) {}
     });
 
     function checkSavedSession() {
@@ -3211,10 +3219,12 @@
     }
 
     function logoutCurrent() {
-      if (currentTeacher) {
+      if (currentActiveView === 'teacher') {
         teacherLogout();
       } else if (currentStudent) {
         studentLogout();
+      } else if (currentTeacher) {
+        teacherLogout();
       }
     }
 
@@ -3222,6 +3232,7 @@
     // --- Navigation Routing ---
     function navigateTo(viewId) {
       currentActiveView = viewId;
+      try { sessionStorage.setItem('tq_last_view', viewId); } catch(e){}
       document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
       const target = document.getElementById('view-' + viewId);
       if (target) target.classList.add('active');
@@ -3235,6 +3246,15 @@
           showStudentLogin();
         }
       } else if (viewId === 'teacher') {
+        if (!currentTeacher) {
+          const savedTch = localStorage.getItem('tq_teacher');
+          if (savedTch) {
+            try {
+              currentTeacher = JSON.parse(savedTch);
+              updateUserBadge();
+            } catch(e) {}
+          }
+        }
         if (currentTeacher) {
           showTeacherDashboard();
           startTeacherAutoSync();
@@ -3313,6 +3333,15 @@
     }
 
     function openTeacherLogin() {
+      if (!currentTeacher) {
+        const savedTch = localStorage.getItem('tq_teacher');
+        if (savedTch) {
+          try {
+            currentTeacher = JSON.parse(savedTch);
+            updateUserBadge();
+          } catch(e) {}
+        }
+      }
       navigateTo('teacher');
     }
 
@@ -3944,7 +3973,7 @@
 
     
     // 🗓️ 英文科考程與聯絡簿狀態
-    let currentEnglishTab = 'contact'; // 'contact' (聯絡簿特訓專區) 或 'daily' (課本進度每日小考)
+    let currentEnglishTab = 'daily'; // 預設為 'daily' (課本進度每日綜合進階小考 Unit 3/4)，聯絡簿只保留抽考
     let cbMonthFilter = 'all'; // 'all', '10', '11', '12', '1'
     let selectedEnglishDate = 'all';
     let currentSubjFilterTag = 'all'; // 'all', 'comprehensive', 'unit_3a', 'unit_3b', 'original'
@@ -4225,11 +4254,11 @@
           const tabSwitchBar = document.createElement('div');
           tabSwitchBar.style.cssText = 'display:flex; gap:0.6rem; margin-bottom:1.25rem; flex-wrap:wrap;';
           tabSwitchBar.innerHTML = `
-            <button type="button" class="btn ${currentEnglishTab === 'contact' ? 'btn-primary' : 'btn-outline-primary'}" onclick="switchEnglishTab('contact')" style="flex:1; min-width:260px; font-weight:800; font-size:1.02rem; padding:0.75rem 1rem; border-radius:10px; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:${currentEnglishTab === 'contact' ? '0 4px 12px rgba(2,132,199,0.25)' : 'none'};">
-              <span>📖</span> 115會考聯絡簿專區 (10/11/1月抽考 ＋ 每日速讀記憶卡)
-            </button>
             <button type="button" class="btn ${currentEnglishTab === 'daily' ? 'btn-primary' : 'btn-outline-primary'}" onclick="switchEnglishTab('daily')" style="flex:1; min-width:260px; font-weight:800; font-size:1.02rem; padding:0.75rem 1rem; border-radius:10px; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:${currentEnglishTab === 'daily' ? '0 4px 12px rgba(2,132,199,0.25)' : 'none'};">
-              <span>📅</span> 課本進度每日綜合進階小考 (Unit 3/4 & 段考 44 份)
+              <span>📅</span> 英文每日測驗（Unit 3 ＆ Unit 4 課本綜合進階小考）
+            </button>
+            <button type="button" class="btn ${currentEnglishTab === 'contact' ? 'btn-primary' : 'btn-outline-primary'}" onclick="switchEnglishTab('contact')" style="flex:1; min-width:260px; font-weight:800; font-size:1.02rem; padding:0.75rem 1rem; border-radius:10px; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:${currentEnglishTab === 'contact' ? '0 4px 12px rgba(2,132,199,0.25)' : 'none'};">
+              <span>📖</span> 聯絡簿抽考專區（10月、11月、1月 三月份隨機大抽考）
             </button>
           `;
           container.appendChild(tabSwitchBar);
@@ -4241,194 +4270,93 @@
         if (currentSubject === 'english' && currentEnglishTab === 'contact') {
           const cbBannerCard = document.createElement('div');
           cbBannerCard.className = 'card';
-          cbBannerCard.style.cssText = 'background:linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%); border:2px solid #0284c7; border-radius:14px; margin-bottom:1.25rem; padding:1.25rem; box-shadow:0 4px 14px rgba(2,132,199,0.1);';
+          cbBannerCard.style.cssText = 'background:linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%); border:2.5px solid #0284c7; border-radius:14px; margin-bottom:1.25rem; padding:1.25rem; box-shadow:0 4px 14px rgba(2,132,199,0.1);';
           
           cbBannerCard.innerHTML = `
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
               <div>
                 <div style="display:inline-flex; align-items:center; gap:6px; background:#0284c7; color:white; font-size:0.82rem; font-weight:800; padding:3px 12px; border-radius:9999px;">
-                  <span>📖</span> 115學年度 會考必備聯絡簿特訓專區
+                  <span>📖</span> 115會考必備 聯絡簿抽考專區
                 </div>
                 <h3 style="font-size:1.32rem; font-weight:800; color:#0c4a6e; margin:0.4rem 0 0.2rem;">
-                  62 天每日單字片語速讀記憶卡 ＋ 10月/11月/1月 三月份隨機大抽考（免每日測驗）
+                  10月 ‧ 11月 ‧ 1月 三月份隨機大抽考（免每日測驗）
                 </h3>
-                <p style="font-size:0.88rem; color:#0369a1; margin:0;">
-                  涵蓋 10/22 至 1/19 聯絡簿單字與片語！聯絡簿<b>不用每天測驗</b>，全學期一律只考<b>【10月、11月、1月】三份月份隨機大抽考</b>（每次隨機抽測當月 20 題），平日隨時點選展開下方速讀記憶卡輕鬆背誦！
+                <p style="font-size:0.9rem; color:#0369a1; margin:0; line-height:1.5;">
+                  聯絡簿<b>免每日測驗</b>，全學期一律只考<b>【10月、11月、1月】三份月份隨機大抽考</b>（每次隨機抽測當月 20 題，題題隨機、選項隨機）！<br>
+                  每日課本常態練習請點擊上方<b>【英文每日測驗（Unit 3 ＆ Unit 4）】</b>進行各課單字文法閱測自主衝刺！
                 </p>
               </div>
-            </div>
-            
-            <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1rem; padding-top:0.75rem; border-top:1px dashed #bae6fd; align-items:center;">
-              <span style="font-size:0.85rem; font-weight:700; color:#0369a1; margin-right:4px;">🗓️ 月份快速篩選：</span>
-              <button type="button" class="btn btn-sm ${cbMonthFilter === 'all' ? 'btn-primary' : 'btn-outline-primary'}" onclick="setCbMonthFilter('all')" style="border-radius:9999px; font-weight:700; font-size:0.84rem; padding:0.35rem 0.9rem;">🌟 全部 62 天</button>
-              <button type="button" class="btn btn-sm ${cbMonthFilter === '10' ? 'btn-primary' : 'btn-outline-primary'}" onclick="setCbMonthFilter('10')" style="border-radius:9999px; font-weight:700; font-size:0.84rem; padding:0.35rem 0.9rem;">📅 10月 (6天)</button>
-              <button type="button" class="btn btn-sm ${cbMonthFilter === '11' ? 'btn-primary' : 'btn-outline-primary'}" onclick="setCbMonthFilter('11')" style="border-radius:9999px; font-weight:700; font-size:0.84rem; padding:0.35rem 0.9rem;">📅 11月 (21天)</button>
-              <button type="button" class="btn btn-sm ${cbMonthFilter === '12' ? 'btn-primary' : 'btn-outline-primary'}" onclick="setCbMonthFilter('12')" style="border-radius:9999px; font-weight:700; font-size:0.84rem; padding:0.35rem 0.9rem;">📅 12月 (23天)</button>
-              <button type="button" class="btn btn-sm ${cbMonthFilter === '1' ? 'btn-primary' : 'btn-outline-primary'}" onclick="setCbMonthFilter('1')" style="border-radius:9999px; font-weight:700; font-size:0.84rem; padding:0.35rem 0.9rem;">📅 1月 (12天)</button>
             </div>
           `;
           container.appendChild(cbBannerCard);
 
-          // 🎲 聯絡簿內容隨機大抽考控制專區 (支援全學期總抽考及各月大抽考，每次隨機抽 20 題)
+          // 🎲 聯絡簿內容隨機大抽考控制專區 (10月/11月/1月，每次隨機抽 20 題)
           const popQuizCard = document.createElement('div');
           popQuizCard.className = 'card';
           popQuizCard.style.cssText = 'background:linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border:2.5px solid #f59e0b; border-radius:14px; margin-bottom:1.5rem; padding:1.25rem; box-shadow:0 6px 18px rgba(245,158,11,0.12);';
 
           const popQuizItemsHtml = [
-            { id: 691, tag: '🎯 10月聯絡簿抽考', scope: '10/22 ~ 10/30 (48 題庫隨機抽取 20 題)', badgeBg: '#d97706', highlight: true },
-            { id: 692, tag: '📅 11月聯絡簿抽考', scope: '11/02 ~ 11/30 (168 題庫隨機抽取 20 題)', badgeBg: '#2563eb' },
-            { id: 694, tag: '📅 1月聯絡簿抽考', scope: '01/04 ~ 01/19 (96 題庫隨機抽取 20 題)', badgeBg: '#2563eb' }
-          ].map(pq => {
-            const assign = assignmentsData.find(a => a.id === pq.id) || LOCAL_ASSIGNMENTS.find(a => a.id === pq.id) || {};
-            let statsHtml = '';
+            { id: 691, tag: '🎯 10月聯絡簿抽考', scope: '10/22 ~ 10/30 (48題庫)', highlight: true },
+            { id: 692, tag: '📅 11月聯絡簿抽考', scope: '11/02 ~ 11/30 (168題庫)', highlight: false },
+            { id: 694, tag: '📅 1月聯絡簿抽考', scope: '01/04 ~ 01/19 (96題庫)', highlight: false }
+          ].map(item => {
+            const assign = assignmentsData.find(a => a.id === item.id) || LOCAL_ASSIGNMENTS.find(a => a.id === item.id) || {};
+            let statsText = '⏳ 尚未測驗 ｜ 隨機抽 20 題 (滿分100)';
             if (assign.attempts_count > 0) {
-              statsHtml = `<div style="font-size:0.83rem; color:#047857; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:6px; padding:0.3rem 0.6rem; font-weight:700; margin-top:0.4rem;">🌟 最高得分：${assign.best_score} 分 (已考 ${assign.attempts_count} 次)</div>`;
-            } else {
-              statsHtml = `<div style="font-size:0.83rem; color:#64748b; background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:0.3rem 0.6rem; margin-top:0.4rem;">⏳ 尚未抽考</div>`;
+              statsText = `🌟 已測驗 <b>${assign.attempts_count}</b> 次 ｜ 最高：<b style="color:#b45309; font-size:1.05rem;">${assign.best_score}</b> 分`;
             }
-
             return `
-              <div style="background:#ffffff; border:1.8px solid ${pq.highlight ? '#f59e0b' : '#cbd5e1'}; border-radius:10px; padding:0.9rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+              <div style="background:#ffffff; border:2px solid ${item.highlight ? '#f59e0b' : '#cbd5e1'}; border-radius:12px; padding:1rem 1.15rem; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 3px 10px rgba(0,0,0,0.05); position:relative;">
+                ${item.highlight ? '<div style="position:absolute; top:-10px; right:12px; background:#d97706; color:#fff; font-size:0.75rem; font-weight:800; padding:2px 10px; border-radius:999px;">🎯 本月推薦必考</div>' : ''}
                 <div>
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
-                    <span style="background:${pq.badgeBg}; color:#fff; font-size:0.78rem; font-weight:800; padding:2px 8px; border-radius:6px;">${pq.tag}</span>
-                    <span style="font-size:0.82rem; font-weight:800; color:#d97706;">題數：20 題</span>
+                  <div style="font-weight:900; font-size:1.15rem; color:#92400e; margin-bottom:0.25rem;">
+                    ${item.tag}
                   </div>
-                  <div style="font-size:0.84rem; color:#475569; margin-top:0.25rem; line-height:1.4;">${pq.scope}</div>
-                  ${statsHtml}
+                  <div style="font-size:0.82rem; color:#b45309; margin-bottom:0.6rem;">
+                    範圍：${item.scope} ‧ 隨機抽 20 題
+                  </div>
+                  <div style="font-size:0.83rem; color:#475569; background:#fef3c7; border-radius:6px; padding:0.35rem 0.6rem; margin-bottom:0.75rem;">
+                    ${statsText}
+                  </div>
                 </div>
-                <div style="margin-top:0.75rem;">
-                  <button class="btn btn-primary" onclick="startExam(${pq.id})" style="width:100%; font-weight:800; padding:0.45rem 0.8rem; font-size:0.92rem; background:${pq.highlight ? '#d97706' : '#2563eb'}; border-color:${pq.highlight ? '#b45309' : '#1d4ed8'}; border-radius:6px; box-shadow:0 3px 8px rgba(0,0,0,0.1);">
-                    🚀 開始抽考（20 題）
-                  </button>
-                </div>
+                <button type="button" class="btn btn-primary" onclick="startExam(${item.id})" style="background:${item.highlight ? '#d97706' : '#b45309'}; border:none; font-weight:800; font-size:0.95rem; border-radius:8px; padding:0.55rem 1rem; width:100%;">
+                  🚀 開始隨機抽考（20 題）
+                </button>
               </div>
             `;
           }).join('');
 
           popQuizCard.innerHTML = `
-            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
-              <div>
-                <div style="display:inline-flex; align-items:center; gap:6px; background:#d97706; color:white; font-size:0.82rem; font-weight:800; padding:3px 12px; border-radius:9999px;">
-                  <span>🎲</span> 聯絡簿內容隨機大抽考
-                </div>
-                <h3 style="font-size:1.32rem; font-weight:800; color:#78350f; margin:0.4rem 0 0.15rem;">
-                  ⚡ 會考聯絡簿單字片語【月份大抽考專區】（限定 10月、11月、1月 共三份）
-                </h3>
-                <p style="font-size:0.88rem; color:#92400e; margin:0;">
-                  快速檢驗各月份單字與片語吸收成效！每次由系統隨機抽取當月 20 題（12 題核心單字 ＋ 8 題重點片語，每人每次題目與選項 ABCD 即時隨機打散）：
-                </p>
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.85rem;">
+              <div style="display:inline-flex; align-items:center; gap:8px;">
+                <span style="font-size:1.5rem;">🎯</span>
+                <span style="font-weight:900; font-size:1.22rem; color:#92400e;">115會考英文聯絡簿 月份抽考專區（共三份試卷）</span>
               </div>
+              <span style="background:#d97706; color:white; font-size:0.8rem; font-weight:800; padding:3px 12px; border-radius:999px;">
+                ⚡ 題題隨機 ‧ 選項打散 ‧ 滿分100 ‧ 歷次最高分計分
+              </span>
             </div>
-
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:0.65rem; margin-top:1rem;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:0.85rem;">
               ${popQuizItemsHtml}
             </div>
           `;
           container.appendChild(popQuizCard);
 
-          // 📖 聯絡簿 62 天每日單字片語速讀記憶卡（背誦專用・免每日測驗）
-          let cbList = LOCAL_ASSIGNMENTS.filter(a => a.id >= 601 && a.id <= 662);
-          if (cbMonthFilter === '10') {
-            cbList = cbList.filter(a => (a.exam_date || '').startsWith('10/'));
-          } else if (cbMonthFilter === '11') {
-            cbList = cbList.filter(a => (a.exam_date || '').startsWith('11/'));
-          } else if (cbMonthFilter === '12') {
-            cbList = cbList.filter(a => (a.exam_date || '').startsWith('12/'));
-          } else if (cbMonthFilter === '1') {
-            cbList = cbList.filter(a => (a.exam_date || '').startsWith('1/') || (a.exam_date || '').startsWith('01/'));
-          }
-
-          cbList.forEach(a => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.style.border = '2px solid #e0e7ff';
-            card.style.borderRadius = '12px';
-            card.style.marginBottom = '0.9rem';
-            card.style.transition = 'all 0.2s';
-
-            const words = a.words || [];
-            const phrases = a.phrases || [];
-
-            const wordListStr = words.map(w => w.english).join(', ');
-            const phraseListStr = phrases.map(p => p.english).join(', ');
-
-            const wordsGridHtml = words.map((w, idx) => `
-              <div style="background:#ffffff; border:1px solid #bfdbfe; border-radius:8px; padding:0.6rem 0.8rem; box-shadow:0 1px 3px rgba(0,0,0,0.04);">
-                <div style="display:flex; justify-content:space-between; align-items:baseline;">
-                  <span style="font-weight:800; font-size:1.02rem; color:#1d4ed8;">${idx + 1}. ${w.english}</span>
-                  <span style="font-size:0.78rem; font-weight:700; color:#2563eb; background:#dbeafe; padding:1px 6px; border-radius:4px;">${w.pos || ''}</span>
-                </div>
-                <div style="font-size:0.9rem; color:#1e293b; margin-top:0.25rem; font-weight:500;">
-                  ${w.chinese}
-                </div>
-              </div>
-            `).join('');
-
-            const phrasesGridHtml = phrases.map((p, idx) => `
-              <div style="background:#ffffff; border:1px solid #fde68a; border-radius:8px; padding:0.6rem 0.8rem; box-shadow:0 1px 3px rgba(0,0,0,0.04);">
-                <div style="font-weight:800; font-size:0.98rem; color:#b45309;">
-                  ${idx + 1}. ${p.english}
-                </div>
-                <div style="font-size:0.9rem; color:#1e293b; margin-top:0.25rem; font-weight:500;">
-                  ${p.chinese}
-                </div>
-              </div>
-            `).join('');
-
-            card.innerHTML = `
-              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
-                <div>
-                  <div style="display:flex; align-items:center; gap:8px;">
-                    <span class="badge badge-primary" style="font-size:0.85rem; padding:3px 10px;">📅 ${a.exam_date}</span>
-                    <span class="badge" style="font-size:0.8rem; padding:3px 8px; background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe;">核心單字 5 ＋ 重點片語 3</span>
-                    <span class="badge" style="font-size:0.78rem; padding:3px 8px; background:#fef3c7; color:#92400e; border:1px solid #fde68a;">💡 免每日測驗・隨時速讀</span>
-                  </div>
-                  <h3 style="font-size:1.15rem; font-weight:800; margin:0.35rem 0 0.15rem; color:#1e293b;">
-                    📋 【${a.exam_date}】會考聯絡簿速讀記憶卡
-                  </h3>
-                </div>
-                <button id="btnToggleCb_${a.id}" class="btn btn-outline-primary btn-sm" onclick="toggleCbCard(${a.id})" style="font-weight:700; border-radius:8px; padding:0.4rem 0.85rem;">
-                  👁️ 展開 / 收合單字片語卡
-                </button>
-              </div>
-
-              <div style="margin:0.55rem 0 0.35rem; background:#f8fafc; border-left:3px solid #3b82f6; padding:0.5rem 0.8rem; border-radius:0 6px 6px 0; font-size:0.88rem; line-height:1.5;">
-                <div>🔹 <b>核心單字</b>：<span style="color:#1d4ed8; font-weight:600;">${wordListStr}</span></div>
-                <div style="margin-top:2px;">🔸 <b>重點片語</b>：<span style="color:#b45309; font-weight:600;">${phraseListStr}</span></div>
-              </div>
-
-              <!-- 每日單字片語速讀記憶卡展開區塊 -->
-              <div id="cbCard_${a.id}" style="display:none; margin-top:0.85rem; padding:0.95rem; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px;">
-                <div style="margin-bottom:0.85rem;">
-                  <div style="font-weight:800; font-size:0.92rem; color:#2563eb; margin-bottom:0.4rem;">
-                    🔹 核心單字 (5 個)：
-                  </div>
-                  <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:0.5rem;">
-                    ${wordsGridHtml}
-                  </div>
-                </div>
-
-                <div style="margin-bottom:0.85rem;">
-                  <div style="font-weight:800; font-size:0.92rem; color:#d97706; margin-bottom:0.4rem;">
-                    🔸 重點片語 (3 個)：
-                  </div>
-                  <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:0.5rem;">
-                    ${phrasesGridHtml}
-                  </div>
-                </div>
-
-                <div style="background:#eff6ff; padding:0.5rem 0.85rem; border-radius:6px; font-size:0.84rem; color:#1e40af; font-weight:700; border:1px solid #bfdbfe;">
-                  💡 <b>溫馨提醒</b>：聯絡簿<b>不用每天測驗</b>！讀熟本日單字片語後，請至上方【10月/11月/1月 抽考專區】進行 20 題隨機抽考！
-                </div>
-              </div>
-            `;
-            container.appendChild(card);
-          });
+          const noticeCard = document.createElement('div');
+          noticeCard.className = 'card';
+          noticeCard.style.cssText = 'background:#f0fdf4; border:1.5px solid #86efac; border-radius:12px; padding:1.2rem; text-align:center; margin-bottom:1.5rem;';
+          noticeCard.innerHTML = `
+            <div style="font-size:1.8rem; margin-bottom:0.35rem;">🎯</div>
+            <div style="font-weight:900; font-size:1.15rem; color:#166534; margin-bottom:0.35rem;">
+              聯絡簿已依教學進度精簡：全學期一律只保留「10月、11月、1月」三份隨機大抽考！
+            </div>
+            <div style="font-size:0.92rem; color:#15803d; line-height:1.6;">
+              📢 <b>免每日測驗</b>：同學不需進行每日聯絡簿測驗，請點選上方<b>【10月/11月/1月 抽考卡片】</b>進行 20 題隨機抽考！<br>
+              每日主要課本測驗進度請至<b>【英文每日測驗（Unit 3 ＆ Unit 4）】</b>頁籤進行自主練習。
+            </div>
+          `;
+          container.appendChild(noticeCard);
         }
-        // -------------------------------------------------------------------------
-        // 模式 B：英文課本進度每日綜合小考 (Unit 3/4 & 段考 44 份)
-        // -------------------------------------------------------------------------
         else if (currentSubject === 'english' && currentEnglishTab === 'daily') {
           const dailyAssigns = assignmentsData.filter(a => a.id < 601 && (!a.category || !a.category.includes('contact')));
           
@@ -5223,15 +5151,29 @@ async function handleTeacherLogin(e) {
     let teacherActiveTab = 'overview';
     let teacherAutoSyncTimer = null;
 
+    let _isTeacherSyncRunning = false;
     function startTeacherAutoSync() {
       stopTeacherAutoSync();
       checkServerHealth();
-      // 1.5 秒極速自動定時輪詢回傳學生成績（交卷後立即即時顯示成績）
-      teacherAutoSyncTimer = setInterval(() => {
+      // 12 秒平穩背景輪詢（若有學生交卷則由 storage/BroadcastChannel 立即0.1秒極速更新）
+      teacherAutoSyncTimer = setInterval(async () => {
+        if (_isTeacherSyncRunning) return;
         if (currentTeacher && currentActiveView === 'teacher' && teacherActiveTab === 'overview') {
-          loadTeacherOverview(false);
+          // 若有彈出視窗或老師正在搜尋輸入，暫緩刷新避免打擾操作
+          const hasModal = document.querySelector('.modal-overlay:not(.hidden)');
+          const searchActive = document.activeElement && (document.activeElement.id === 'studentSearchInput' || document.activeElement.id === 'matrixSearchInput');
+          if (hasModal || searchActive) return;
+
+          _isTeacherSyncRunning = true;
+          try {
+            await loadTeacherOverview(false);
+          } catch(e) {
+            console.warn("Auto sync background tick warning:", e);
+          } finally {
+            _isTeacherSyncRunning = false;
+          }
         }
-      }, 1500);
+      }, 12000);
     }
 
     function stopTeacherAutoSync() {
@@ -5488,13 +5430,13 @@ async function handleTeacherLogin(e) {
       if (subjFilter === 'english') {
         scopeButtonsHtml = `
           <button type="button" class="btn btn-sm ${teacherMatrixScope === 'october_focus' ? 'btn-primary' : 'btn-outline'}" onclick="setTeacherMatrixScope('october_focus')" style="font-weight:700; border-radius:999px; font-size:0.83rem;">
-            🌟 10月份焦點 (10月抽考 ＋ 課本小考)
-          </button>
-          <button type="button" class="btn btn-sm ${teacherMatrixScope === 'pop_quizzes' ? 'btn-primary' : 'btn-outline'}" onclick="setTeacherMatrixScope('pop_quizzes')" style="font-weight:700; border-radius:999px; font-size:0.83rem;">
-            🎯 聯絡簿抽考 (3 份：10月/11月/1月)
+            🌟 10月份焦點 (10月抽考 ＋ U3每日測驗)
           </button>
           <button type="button" class="btn btn-sm ${teacherMatrixScope === 'daily_progress' ? 'btn-primary' : 'btn-outline'}" onclick="setTeacherMatrixScope('daily_progress')" style="font-weight:700; border-radius:999px; font-size:0.83rem;">
-            📅 課本每日進階 (Unit 3/4 44份)
+            📅 英文每日測驗 (Unit 3 ＆ Unit 4)
+          </button>
+          <button type="button" class="btn btn-sm ${teacherMatrixScope === 'pop_quizzes' ? 'btn-primary' : 'btn-outline'}" onclick="setTeacherMatrixScope('pop_quizzes')" style="font-weight:700; border-radius:999px; font-size:0.83rem;">
+            🎯 聯絡簿抽考 (10月/11月/1月 3份)
           </button>
           <button type="button" class="btn btn-sm ${teacherMatrixScope === 'all_active' ? 'btn-primary' : 'btn-outline'}" onclick="setTeacherMatrixScope('all_active')" style="font-weight:700; border-radius:999px; font-size:0.83rem;">
             📊 全部測驗完整大對照
@@ -5523,18 +5465,13 @@ async function handleTeacherLogin(e) {
             }
           });
         } else if (teacherMatrixScope === 'daily_progress') {
-          const list = LOCAL_ASSIGNMENTS.filter(a => a.subject_code === 'english' && a.id < 600);
+          const list = LOCAL_ASSIGNMENTS.filter(a => a.subject_code === 'english' && a.id < 600 && a.is_active !== 0);
           list.forEach(a => {
-            matrixColumns.push({ id: a.id, title: a.title, shortTitle: a.exam_date ? `${a.exam_date} 進階` : a.title.slice(0, 10), isPop: false });
-          });
-        } else if (teacherMatrixScope === 'contact_book') {
-          const list = LOCAL_ASSIGNMENTS.filter(a => a.id >= 601 && a.id <= 662);
-          list.forEach(a => {
-            matrixColumns.push({ id: a.id, title: a.title, shortTitle: `📖 ${a.exam_date} 特訓`, isPop: false });
+            matrixColumns.push({ id: a.id, title: a.title, shortTitle: a.exam_date ? `${a.exam_date} 每日` : a.title.slice(0, 10), isPop: false });
           });
         } else {
-          // all_active
-          const allEng = LOCAL_ASSIGNMENTS.filter(a => a.subject_code === 'english' && a.is_active !== 0);
+          // all_active: 顯示全部開放測驗（排除已刪減之每日聯絡簿）
+          const allEng = LOCAL_ASSIGNMENTS.filter(a => a.subject_code === 'english' && a.is_active !== 0 && !(a.id >= 601 && a.id <= 662));
           allEng.forEach(a => {
             let short = a.exam_date ? `${a.exam_date}` : a.title.slice(0, 10);
             if (a.id >= 690 && a.id <= 694) short = `🎯 ${a.title.slice(0, 12)}`;
@@ -6245,35 +6182,52 @@ async function handleTeacherLogin(e) {
         }
       }
 
-      // ☁️ 跨載具雲端試算表成績同步融合 (Google Apps Script / GitHub Pages)
+      // ☁️ 跨載具雲端試算表成績同步融合 (手動刷新或距離上次超過45秒才呼叫GAS，避免高頻請求導致429或記憶體崩潰)
       try {
         const gasUrl = getGasApiUrl();
-        if (gasUrl) {
+        const now = Date.now();
+        if (gasUrl && (isManual || (now - (window._lastGasFetchTime || 0) > 45000))) {
+          window._lastGasFetchTime = now;
           const cloudScores = await cloudGetAllScores(subjFilter);
           if (Array.isArray(cloudScores) && cloudScores.length > 0) {
 
-            // 同步快取至本地各科獨立資料庫，確保離線與作答詳情100%一致
+            // 批次快取新紀錄，避免在迴圈內反覆序列化寫入 localStorage
+            const localRecs = getStoredExamRecords('all');
+            const localMap = new Set(localRecs.map(r => `${r.seat_no}_${r.assignment_id}_${r.score}_${r.completed_at}`));
+            let hasNewCloud = false;
+
             cloudScores.forEach(cs => {
               const seatPad = String(cs.seat_no || '').padStart(2, '0');
               const { subj: cSubj, aid: cAid, title: cTitle } = parseCloudRecordSubjectAndAid(cs);
-              const rec = {
-                id: cs.id || ('gas_' + (cs.completed_at ? new Date(cs.completed_at).getTime() : Date.now()) + '_' + cAid),
-                assignment_id: cAid,
-                assignment_title: cTitle,
-                subject_code: cSubj,
-                student_id: parseInt(seatPad, 10) || 1,
-                seat_no: seatPad,
-                student_name: cs.name || '',
-                score: Number(cs.score) || 0,
-                correct_count: Math.round((Number(cs.score) || 0) / 5),
-                total_questions: 20,
-                duration_seconds: 0,
-                completed_at: cs.completed_at || new Date().toLocaleString('zh-TW', { hour12: false }),
-                answers: [],
-                wrong_questions_str: cs.wrong_questions || ''
-              };
-              saveStoredExamRecord(rec);
+              const key = `${seatPad}_${cAid}_${cs.score}_${cs.completed_at}`;
+              if (!localMap.has(key)) {
+                localMap.add(key);
+                hasNewCloud = true;
+                const rec = {
+                  id: cs.id || ('gas_' + (cs.completed_at ? new Date(cs.completed_at).getTime() : Date.now()) + '_' + cAid),
+                  assignment_id: cAid,
+                  assignment_title: cTitle,
+                  subject_code: cSubj,
+                  student_id: parseInt(seatPad, 10) || 1,
+                  seat_no: seatPad,
+                  student_name: cs.name || '',
+                  score: Number(cs.score) || 0,
+                  correct_count: Math.round((Number(cs.score) || 0) / 5),
+                  total_questions: 20,
+                  duration_seconds: 0,
+                  completed_at: cs.completed_at || new Date().toLocaleString('zh-TW', { hour12: false }),
+                  answers: [],
+                  wrong_questions_str: cs.wrong_questions || ''
+                };
+                localRecs.unshift(rec);
+              }
             });
+
+            if (hasNewCloud) {
+              try {
+                localStorage.setItem('tq_exam_records', JSON.stringify(localRecs.slice(0, 1000)));
+              } catch(e) {}
+            }
 
             // 整合至 data.students (嚴格比對科目與測驗項目)
             data.students.forEach(sv => {
@@ -6345,9 +6299,18 @@ async function handleTeacherLogin(e) {
       renderTeacherStats(data.stats);
       updateTeacherRosterScopeDisplay(data);
 
-      // 若老師正在搜尋欄搜尋學生座號或姓名，保留其搜尋結果
       const searchInput = document.getElementById('studentSearchInput');
       const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+      // 檢查資料指紋：若非手動刷新，且學生分數與次數完全無變化，無須重新繪製全班大表（避免閃退與失焦）
+      const currentSig = (data.students || []).map(s => `${s.seat_no}:${s.attempts_count}:${s.best_score}:${s.latest_score}`).join('|') + `_${subjFilter}_${aid}_${teacherMatrixScope}`;
+      if (!isManual && currentSig === window._lastTeacherSig && !query) {
+        updateTeacherSyncTimestamp();
+        updateTeacherSyncBadge();
+        return;
+      }
+      window._lastTeacherSig = currentSig;
+
       if (query) {
         filterStudentTable();
       } else {
